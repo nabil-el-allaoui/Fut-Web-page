@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fut Ultimate team</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="">
+        <a class="nav-bar" href="#">Make Your Squad</a>
+        <button class="main-button">Create card</button>
+    </header>
+    <div class="main-container">
+        <button class="back-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-arrow-left">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </button>
+        <div class="available-create-cards">
+            <!-- <button class="add-player-card">Create your Player</button> -->
+            <div class="adding-container">
+                <div class="carding">
+                    <h1>Player Card</h1>
+                    <div class="images-uploaded">
+                        <div class="profile-image">
+                            <img src="images/profile.png" alt="" id="player-picture">
+                            <label for="pro-file">Profile-upload</label>
+                            <input type="file" id="pro-file">
+                        </div>
+                        <div class="flag-image">
+                            <img src="images/flag.png" alt="" id="flag-picture">
+                            <label for="flag-file">flag-upload</label>
+                            <input type="file" id="flag-file">
+                        </div>
+                        <div class="league-image">
+                            <img src="images/league-empty.png" alt="" id="league-picture">
+                            <label for="league-file">league-upload</label>
+                            <input type="file" id="league-file">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Name" id="Player-name">
+                        <input type="text" placeholder="Rating" id="Player-rating">
+                    </div>
+                    <select class="selection" id="position-selector">
+                        <option value="LW">LW</option>
+                        <option value="ST">ST</option>
+                        <option value="RW">RW</option>
+                        <option value="CM">CM</option>
+                        <option value="LB">LB</option>
+                        <option value="CB">CB</option>
+                        <option value="RB">RB</option>
+                        <option value="GK">GK</option>
+                    </select>
+                    <div class="created-stats">
+                        <input type="text" placeholder="pace" id="pacing">
+                        <input type="text" placeholder="shooting" id="Shooting">
+                        <input type="text" placeholder="passing" id="Passing">
+                        <input type="text" placeholder="dribbling" id="Dribbling">
+                        <input type="text" placeholder="defending" id="Defending">
+                        <input type="text" placeholder="physical" id="Physical">
+                    </div>
+                    <div class="gk-created">
+                        <input  type="text" placeholder="diving" id="Diving">
+                        <input  type="text" placeholder="handling" id="Handling">
+                        <input  type="text" placeholder="kicking" id="Kicking">
+                        <input  type="text" placeholder="reflexes" id="Reflexes">
+                        <input  type="text" placeholder="speed" id="Speed">
+                        <input  type="text" placeholder="positioning" id="Positioning">
+                    </div>
+                    <button class="submit-button">Create</button>
+                </div>
+            </div>
+            <div class="cards-exist">
+                <!-- <div class="listed-card" data-id="card1">
+                    <img src="images/empty-card.webp" alt="">
+                    <div class="listed-card-stats">
+                        <div class="listed-stats">
+                            <p class="player_rate">55</p>
+                            <p class="player_post">ST</p>
+                        </div>
+                        <div class="listed-image">
+                            <img src="images/Pele-No-Background.png" alt="">
+                        </div>
+                        <div class="listed-name">
+                            <p>Pele</p>
+                        </div>
+                        <div class="listed-player-stats">
+                            <div class="lpacing">
+                                <p>PAC</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lshooting">
+                                <p>SHO</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lpassing">
+                                <p>PAS</p>
+                                <p>99</p>
+                            </div>
+                            <div class="ldribbling">
+                                <p>DRI</p>
+                                <p>99</p>
+                            </div>
+                            <div class="ldefending">
+                                <p>DEF</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lphysical">
+                                <p>PHY</p>
+                                <p>99</p>
+                            </div>
+                        </div>
+                        <div class="listed-flag">
+                            <img src="images/flag.png" alt="">
+                        </div>
+                        <div class="listed-league">
+                            <img src="images/league.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="listed-card" data-id="card2">
+                    <img src="images/empty-card.webp" alt="">
+                    <div class="listed-card-stats">
+                        <div class="listed-stats">
+                            <p class="player_rate">55</p>
+                            <p class="player_post">CB</p>
+                        </div>
+                        <div class="listed-image">
+                            <img src="images/Pele-No-Background.png" alt="">
+                        </div>
+                        <div class="listed-name">
+                            <p>TEst</p>
+                        </div>
+                        <div class="listed-player-stats">
+                            <div class="lpacing">
+                                <p>PAC</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lshooting">
+                                <p>SHO</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lpassing">
+                                <p>PAS</p>
+                                <p>99</p>
+                            </div>
+                            <div class="ldribbling">
+                                <p>DRI</p>
+                                <p>99</p>
+                            </div>
+                            <div class="ldefending">
+                                <p>DEF</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lphysical">
+                                <p>PHY</p>
+                                <p>99</p>
+                            </div>
+                        </div>
+                        <div class="listed-flag">
+                            <img src="images/flag.png" alt="">
+                        </div>
+                        <div class="listed-league">
+                            <img src="images/league.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listed-card" data-id="card3">
+                    <img src="images/empty-card.webp" alt="">
+                    <div class="listed-card-stats">
+                        <div class="listed-stats">
+                            <p class="player_rate">88</p>
+                            <p class="player_post">CB</p>
+                        </div>
+                        <div class="listed-image">
+                            <img src="images/Pele-No-Background.png" alt="">
+                        </div>
+                        <div class="listed-name">
+                            <p>another</p>
+                        </div>
+                        <div class="listed-player-stats">
+                            <div class="lpacing">
+                                <p>PAC</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lshooting">
+                                <p>SHO</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lpassing">
+                                <p>PAS</p>
+                                <p>99</p>
+                            </div>
+                            <div class="ldribbling">
+                                <p>DRI</p>
+                                <p>99</p>
+                            </div>
+                            <div class="ldefending">
+                                <p>DEF</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lphysical">
+                                <p>PHY</p>
+                                <p>99</p>
+                            </div>
+                        </div>
+                        <div class="listed-flag">
+                            <img src="images/flag.png" alt="">
+                        </div>
+                        <div class="listed-league">
+                            <img src="images/league.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listed-card" data-id="card4">
+                    <img src="images/empty-card.webp" alt="">
+                    <div class="listed-card-stats">
+                        <div class="listed-stats">
+                            <p class="player_rate">55</p>
+                            <p class="player_post">LW</p>
+                        </div>
+                        <div class="listed-image">
+                            <img src="images/Pele-No-Background.png" alt="">
+                        </div>
+                        <div class="listed-name">
+                            <p>TEst</p>
+                        </div>
+                        <div class="listed-player-stats">
+                            <div class="lpacing">
+                                <p>PAC</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lshooting">
+                                <p>SHO</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lpassing">
+                                <p>PAS</p>
+                                <p>99</p>
+                            </div>
+                            <div class="ldribbling">
+                                <p>DRI</p>
+                                <p>99</p>
+                            </div>
+                            <div class="ldefending">
+                                <p>DEF</p>
+                                <p>99</p>
+                            </div>
+                            <div class="lphysical">
+                                <p>PHY</p>
+                                <p>99</p>
+                            </div>
+                        </div>
+                        <div class="listed-flag">
+                            <img src="images/flag.png" alt="">
+                        </div>
+                        <div class="listed-league">
+                            <img src="images/league.png" alt="">
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+        <div class="stadium-image">
+            <img src="images/stadium_background.webp" alt="">
+            <div class="Player-cards">
+                <div class="attack-cards">
+                    <div class="card" id="LW">
+                        <img class="test" src="images/empty-card.webp" alt="">
+                        <p class="position">LW</p>
+                    </div>
+                    <div class="card" id="ST">
+                        <img src="images/empty-card.webp" alt="">
+                        <p class="position">ST</p>
+                    </div>
+                    <div class="card" id="RW">
+                        <img src="images/empty-card.webp" alt="">
+                        <p class="position">RW</p>
+                    </div>
+                </div>
+                <div class="mid-cards">
+                    <div class="card" id="CM">
+                        <img src="images/empty-card.webp" alt="">
+                        <p class="position">CM</p>
+                    </div>
+                    <div class="card" id="CM">
+                        <img src="images/empty-card.webp" alt="">
+                        <p class="position">CM</p>
+                    </div>
+                    <div class="card" id="CM">
+                        <img src="images/empty-card.webp" alt="">
+                        <p class="position">CM</p>
+                    </div>
+                </div>
+                <div class="defenders">
+                    <div class="card" id="LB">
+                        <img src="images/empty-card.webp" alt="">
+                        <p class="position">LB</p>
+                    </div>
+                    <div class="card" id="CB">
+                        <img src="images/empty-card.webp" alt="">
+                        <p class="position">CB</p>
+                    </div>
+                    <div class="card" id="CB">
+                        <img src="images/empty-card.webp" alt="">
+                        <p class="position">CB</p>
+                    </div>
+                    <div class="card" id="RB">
+                        <img src="images/empty-card.webp" alt="">
+                        <p class="position">RB</p>
+                    </div>
+                </div>
+                <div class="goalkeeper">
+                    <div class="card" id="GK">
+                        <img src="images/empty-card.webp" alt="">
+                        <p class="position">GK</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="style/index.js"></script>
+</body>
+
+</html>

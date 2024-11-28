@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Itim&family=Kode+Mono:wght@400..700&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Itim&family=Jaro:opsz@6..72&family=Kode+Mono:wght@400..700&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spicy+Rice&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #191825;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 0 8px 0;
+}
+
+header img {
+    width: 120px;
+    height: 70px;
+}
+
+.nav-bar {
+    text-decoration: none;
+    color: white;
+    font-family: "Parkinsans";
+    font-weight: bolder;
+    font-size: 21px;
+}
+
+.main-button {
+    font-family: "Parkinsans";
+    background-color: #E384FF;
+    border: none;
+    border-radius: 3px;
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.main-button:hover {
+    background-color: #FFA3FD;
+}
+
+.main-container {
+    margin-top: 30px;
+}
+
+.stadium-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.stadium-image img {
+    width: 100vw;
+    height: 100vh;
+}
+
+.Player-cards {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+
+.attack-cards {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    justify-content: center;
+    column-gap: 200px;
+}
+
+.mid-cards {
+    height: 200px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    justify-content: center;
+    column-gap: 90px;
+}
+
+.defenders {
+    margin-top: 10px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+#CB {
+    transform: translateY(70px);
+}
+
+.goalkeeper {
+    margin-top: 0px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 150px;
+    justify-content: center;
+}
+
+.card {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: yellow; */
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.position {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.stats {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    border-radius: 40px;
+}
+
+.rating {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rating p {
+    line-height: 5px;
+}
+
+.player-pic {
+    position: absolute;
+    right: 20%;
+    top: 13%;
+}
+
+.player-pic img {
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+}
+
+.player-name {
+    font-family: sans-serif;
+    font-weight: bolder;
+    position: absolute;
+    color: white;
+    top: 88px;
+    left: 55px;
+}
+
+.shooting {
+    bottom: 46px;
+    left: 19px;
+    font-size: 10px;
+    position: absolute;
+    line-height: 3px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+.passing {
+    color: white;
+    font-family: sans-serif;
+    bottom: 46px;
+    left: 43px;
+    font-size: 10px;
+    position: absolute;
+    line-height: 3px;
+}
+
+.dribbling {
+    color: white;
+    font-family: sans-serif;
+    bottom: 46px;
+    left: 64px;
+    font-size: 10px;
+    position: absolute;
+    line-height: 3px;
+}
+
+.defending {
+    color: white;
+    font-family: sans-serif;
+    bottom: 46px;
+    left: 85px;
+    font-size: 10px;
+    position: absolute;
+    line-height: 3px;
+}
+
+.physical {
+    color: white;
+    font-family: sans-serif;
+    bottom: 46px;
+    left: 107px;
+    font-size: 10px;
+    position: absolute;
+    line-height: 3px;
+}
+
+.flag img {
+    width: 20px;
+    height: 20px;
+}
+
+.flag {
+    position: absolute;
+    bottom: 25px;
+    left: 65px;
+}
+
+.league img {
+    width: 20px;
+    height: 20px;
+}
+
+.league {
+    position: absolute;
+    top: 70px;
+    left: 27px;
+}
+
+.available-create-cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards-exist {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 70vw;
+    border: 1px solid gray;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+}
+
+.cards-exist img {
+    height: 210px;
+}
+
+.cards-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cards-exist h1 {
+    color: white;
+}
+
+.add-player-card {
+    font-family: "Parkinsans";
+    background-color: #E384FF;
+    border: none;
+    border-radius: 3px;
+    height: 50px;
+    width: 140px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.add-player-card:hover {
+    background-color: #FFA3FD;
+}
+
+.carding {
+    border: 1px solid #e5a2f9;
+    height: 700px;
+    width: 700px;
+    display: grid;
+    place-content: center;
+    row-gap: 20px;
+    text-align: center;
+}
+
+.carding h1 {
+    font-family: sans-serif;
+    color: white;
+}
+
+.carding input {
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    font-size: 17px;
+    outline: none;
+}
+
+.selection {
+    margin: auto;
+    height: 40px;
+    width: 600px;
+}
+
+/* .adding-container {
+    display: none;
+} */
+
+.listed-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.listed-stats {
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 14px;
+    line-height: 3px;
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    text-align: center;
+}
+
+.listed-image {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.listed-image img {
+    height: 70px;
+}
+
+.listed-name {
+    position: absolute;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    top: 90px;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.listed-player-stats {
+    position: absolute;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    bottom: 40px;
+    line-height: 3px;
+    left: 18px;
+    font-size: 8px;
+    column-gap: 3px;
+    text-align: center;
+}
+
+.listed-flag {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.listed-flag img {
+    height: 25px;
+    width: 30px;
+}
+
+.listed-league {
+    position: absolute;
+    top: 55px;
+    left: 17px;
+}
+
+.listed-league img {
+    height: 30px;
+}
+
+.available-create-cards {
+    display: none;
+}
+
+.back-button {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.back-button {
+    display: none;
+    cursor: pointer;
+}
+
+.profile-image {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.profile-image input {
+    display: none;
+}
+
+.profile-image label {
+    margin-top: 10px;
+    color: white;
+    font-family: sans-serif;
+    padding: 10px 10px;
+    background-color: #E384FF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.flag-image {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.flag-image img {
+    width: 60px;
+    height: 40px;
+    background-color: rgb(195, 193, 193);
+}
+
+.flag-image input {
+    display: none;
+}
+
+.flag-image label {
+    color: white;
+    font-family: sans-serif;
+    padding: 10px 10px;
+    background-color: #E384FF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.league-image{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+.league-image img {
+    width: 60px;
+    height: 40px;
+    background-color: rgb(195, 193, 193);
+}
+.league-image input {
+    display: none;
+}
+.league-image label{
+    color: white;
+    font-family: sans-serif;
+    padding: 10px 10px;
+    background-color: #E384FF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.gk-created {
+    display: none;
+}
+.submit-button{
+    padding: 10px 15px;
+    margin: auto;
+    border: none;
+    background-color: #E384FF;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
