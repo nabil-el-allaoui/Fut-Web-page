@@ -44,6 +44,8 @@ let positioning = document.getElementById("Positioning");
 
 let main = document.querySelector(".main-button");
 
+let allCards = document.querySelector(".all-cards");
+
 
 
 let currentCard = null;
@@ -152,6 +154,12 @@ submitBttn.onclick = function () {
     listedContainer.innerHTML += newCard;
     listed_cards = document.querySelectorAll(".listed-card");
 
+    const allCardElement = document.createElement("div");
+    allCardElement.innerHTML = newCard;
+    allCards.appendChild(allCardElement.firstElementChild);
+
+    listed_cards = document.querySelectorAll(".listed-card");
+
     listed_cards.forEach((j) => {
         j.addEventListener("click", () => {
             if (currentCard) {
@@ -175,16 +183,26 @@ submitBttn.onclick = function () {
     });
 }
 
-
 cards.forEach(e => {
     e.addEventListener("click", () => {
         clickedPost = e.id;
         currentCard = e;
+        allCards.style.display = "none";
         stadiumContainer.style.display = "none";
         list_adding.style.display = "flex";
         backBttn.style.display = "block";
         carding.style.display = "none"
-        listed_cards.forEach((card) => {
+        listedContainer.style.display = ""
+        // listed_cards.forEach((card) => {
+        //     let playerPosition = card.querySelector(".player_post").innerText;
+        //     if (playerPosition === clickedPost && !card.classList.contains("used-card")) {
+        //         card.style.display = "";
+        //     } else {
+        //         card.style.display = "none";
+        //     }
+        // });
+
+        Array.from(listedContainer.children).forEach((card) => {
             let playerPosition = card.querySelector(".player_post").innerText;
             if (playerPosition === clickedPost && !card.classList.contains("used-card")) {
                 card.style.display = "";
@@ -196,17 +214,15 @@ cards.forEach(e => {
 });
 
 main.onclick = function () {
+    allCards.style.display = "grid";
     carding.style.display = ""
-    // addButton.style.display = "none"
     stadiumContainer.style.display = "none";
     list_adding.style.display = "flex";
     backBttn.style.display = "block";
+    listedContainer.style.display = "none"
 }
 
 
-// addButton.onclick = function adding() {
-//     addinContainer.style.display = "block";
-// }
 backBttn.addEventListener("click", () => {
     stadiumContainer.style.display = "";
     list_adding.style.display = "none";

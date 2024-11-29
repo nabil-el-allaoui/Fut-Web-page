@@ -38,7 +38,7 @@ header img {
     border: none;
     border-radius: 3px;
     height: 40px;
-    width: 80px;
+    width: 100px;
     cursor: pointer;
     color: white;
     font-weight: bold;
@@ -510,4 +510,96 @@ header img {
     border-radius: 4px;
     color: white;
     cursor: pointer;
+}
+
+.all-cards{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 70vw;
+    border: 1px solid gray;
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+}
+.all-cards img {
+    height: 210px;
+}
+
+
+.all-cards .listed-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.all-cards .listed-stats {
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 14px;
+    line-height: 3px;
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    text-align: center;
+}
+
+.all-cards .listed-image {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.all-cards .listed-image img {
+    height: 70px;
+}
+
+.all-cards .listed-name {
+    position: absolute;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    top: 90px;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.all-cards .listed-player-stats {
+    position: absolute;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    bottom: 40px;
+    line-height: 3px;
+    left: 18px;
+    font-size: 8px;
+    column-gap: 3px;
+    text-align: center;
+}
+
+.all-cards .listed-flag {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.all-cards .listed-flag img {
+    height: 25px;
+    width: 30px;
+}
+
+.all-cards .listed-league {
+    position: absolute;
+    top: 55px;
+    left: 17px;
+}
+
+.all-cards .listed-league img {
+    height: 30px;
 }
